@@ -1,16 +1,15 @@
 import { useState } from "react";
 import "./App.css";
-
+import { Button, Theme } from "radix-react-ui-lib";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h1>radix-react-ui-lib Test App</h1>
-      <button onClick={() => setCount((count) => count + 1)}>
+    <Theme>
+      <Button onClick={() => setCount((count) => count + 1)}>
         count is {count}
-      </button>
-    </>
+      </Button>
+    </Theme>
   );
 }
 
